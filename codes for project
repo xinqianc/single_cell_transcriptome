@@ -1,0 +1,13 @@
+Sequencing dataset: GSE73727 (Gene Expression Omnibus, GEO)
+Click SRA RUN Selector in the supplementary file (There are 70 samples [70 cells]), download 70 samples by using "prefetch" one by one.
+Download SRA toolkit environment: 
+(base) [xinqianc@colossus long_term_project]$ wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current (https://ncbi.github.io/sra-tools/install_config.html) 
+(base) [xinqianc@colossus long_term_project]$tar -xzf sratoolkit.current-centos_linux64.tar.gz (unpacking tar file)
+(base) [xinqianc@colossus long_term_project]$cd sratoolkit.2.9.6-1-centos_linux64/
+(base) [xinqianc@colossus sratoolkit.2.9.6-1-centos_linux64]$ cd bin (prefetch and fastq-dump is in bin file)
+
+
+
+(base) [xinqianc@colossus ~]$ cd scratch
+(base) [xinqianc@colossus scratch]$ mkdir long_term_project
+(base) [xinqianc@colossus scratch]$ cd long_term_project/
