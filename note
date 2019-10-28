@@ -1,0 +1,6 @@
+Analysis of single cell RNA-seq data
+https://www.youtube.com/watch?v=thHgPqQpkE4&t=2517s
+
+WorkfLow
+Read QC--> Alignment --> Mapping QC --> Cell QC --> Normalization --> Confounders
+--> network, clustering, differential expression....
