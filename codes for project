@@ -12,3 +12,5 @@ I still can not download SRR although I changed the environment to scratch....??
 (base) [xinqianc@colossus ~]$ cd scratch
 (base) [xinqianc@colossus scratch]$ mkdir long_term_project
 (base) [xinqianc@colossus scratch]$ cd long_term_project/
+
+fastq-dump
