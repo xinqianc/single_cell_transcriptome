@@ -1,17 +1,19 @@
 Analysis of single cell RNA-seq data
 https://www.youtube.com/watch?v=thHgPqQpkE4&t=2517s
 
-WorkfLow
+1.WorkfLow
 Read QC--> Alignment --> Mapping QC --> Cell QC --> Normalization --> Confounders
 --> network, clustering, differential expression....
 (orange: scRNA, blue: general)
 
 
-read1,read2 from the same transcript, read 2 has cell barcode sequence.
-
-
-
-
+2.read1,read2 from the same transcript, read 2 has cell barcode sequence.
+##(1)Unique Molecular Identifiers:
+Unique Molecular Identifiers are short (4-10bp) random barcodes added to transcripts during reverse-transcription. 
+They enable sequencing reads to be assigned to individual transcript molecules and thus the removal of amplification noise and biases from scRNASeq data.
+[Like INS gene transcripts to two RNAs, these two RNAs are the same, but they have different UMIs.]
+(Problems could happen in UMIs (when doing PCR, errors like basepair substitution could happen and make things complex.)
+##(2)Cell Barcodes
 
 
 
