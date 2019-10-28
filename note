@@ -4,3 +4,15 @@ https://www.youtube.com/watch?v=thHgPqQpkE4&t=2517s
 WorkfLow
 Read QC--> Alignment --> Mapping QC --> Cell QC --> Normalization --> Confounders
 --> network, clustering, differential expression....
+(orange: scRNA, blue: general)
+
+
+read1,read2 from the same transcript, read 2 has cell barcode sequence.
+
+
+
+
+
+
+
+
