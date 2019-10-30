@@ -14,7 +14,11 @@ They enable sequencing reads to be assigned to individual transcript molecules a
 [Like INS gene transcripts to two RNAs, these two RNAs are the same, but they have different UMIs.]
 (Problems could happen in UMIs (when doing PCR, errors like basepair substitution could happen and make things complex.)
 ##(2)Cell Barcodes
+Know reads belong to which cells
 
+3.demultiplexing
+Demultiplexing refers to the step in processing where you'd use the barcode information
+in order to know which sequences came from which samples after they had all be sequenced together.
 
-
-
+4. Use STAR to align reads
+Find Ref transcriptomes: https://useast.ensembl.org/info/data/ftp/index.html
