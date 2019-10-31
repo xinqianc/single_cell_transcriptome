@@ -20,6 +20,13 @@ Know reads belong to which cells
 Demultiplexing refers to the step in processing where you'd use the barcode information
 in order to know which sequences came from which samples after they had all be sequenced together.
 
+------------------------------------------------
+we don't need to worry about UMI,demultiplexing those steps, they are those steps before we get the raw reads (like pair-end reads, read1,read2)
+from each cell.
+I think they are done by illumina company, so the customer get raw reads from each cell and process the data.
+https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger
+
+-----------------------------------------------------------------------------------------------------
 4. Use STAR to align reads
 Find Ref transcriptomes: https://useast.ensembl.org/info/data/ftp/index.html
 
@@ -38,3 +45,14 @@ samtools sort -n original.bam -o sorted_by_name.bam
 samtools view -b -F 256 sorted_by_name.bam -o primary_alignment_only.bam
 # convert to fastq
 bedtools bamtofastq -i primary_alignment_only.bam -fq read1.fq -fq2 read2.fq
+
+PS: when do the alignment, we need to be aware of RNA spkie-in ??(But I think it is tackled before raw reads.)
+https://www.reddit.com/r/bioinformatics/comments/7oxwne/about_spikein_normalization_for_analyses_of/
+
+(3) do mapping QC
+RSEQC (check the quality)
+
+(4)Reads quantification: to quantify the expression level of each gene for each cell
+HT-seq
+
+
