@@ -15,6 +15,7 @@ They enable sequencing reads to be assigned to individual transcript molecules a
 (Problems could happen in UMIs (when doing PCR, errors like basepair substitution could happen and make things complex.)
 ##(2)Cell Barcodes
 Know reads belong to which cells
+https://www.biorxiv.org/content/10.1101/103267v1
 
 3.demultiplexing
 Demultiplexing refers to the step in processing where you'd use the barcode information
@@ -56,3 +57,4 @@ RSEQC (check the quality)
 HT-seq
 
 
+1:34:55
