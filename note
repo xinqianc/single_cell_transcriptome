@@ -22,3 +22,19 @@ in order to know which sequences came from which samples after they had all be s
 
 4. Use STAR to align reads
 Find Ref transcriptomes: https://useast.ensembl.org/info/data/ftp/index.html
+
+(1)first, to put ref:genome into new make directory:indices/STAR (Generating genome index)
+STAR manual: https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf
+mkdir indices
+mkdir indices/STAR
+STAR --runThreadN 4 --runMode genomeGenerate --genomeDir indices/STAR --genomeFastaFiles Share/2000_reference.transcripts.fa
+(2)perform the mapping step
+STAR --runThreadN 4 --genomeDir indices/STAR --readFilesIn Share/ERR522959_1.fastq Share/ERR522959_2.fastq --outFileNamePrefix results/STAR/
+output file format: BAM
+change formats: 
+# sort reads by name
+samtools sort -n original.bam -o sorted_by_name.bam
+# remove secondary alignments
+samtools view -b -F 256 sorted_by_name.bam -o primary_alignment_only.bam
+# convert to fastq
+bedtools bamtofastq -i primary_alignment_only.bam -fq read1.fq -fq2 read2.fq
