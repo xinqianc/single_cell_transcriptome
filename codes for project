@@ -38,3 +38,6 @@ I have tried prefetch yet, because prefetch file is bigger, fastq-dump could als
 (base) [xinqianc@colossus bin]$ ./fastq-dump SRR2558142  
 (base) [xinqianc@colossus bin]$ ./fastq-dump SRR2558140  
 
+
+./fasterq-dump SRR2558138 -O ~/scratch/long_term_data
+
