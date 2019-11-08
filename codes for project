@@ -25,7 +25,7 @@ change path to scratch/long_term_data ( because if I only change the path to scr
 (3)and then we could successfully run the sample fastq-dump file now
 I have tried prefetch yet, because prefetch file is bigger, fastq-dump could also provide enough information.
 
-(3)Download SRR file by fastq-dump 
+(3)Download SRR file by ./fasterq-dump
 (base) [xinqianc@colossus ~]$ cd scratch
 (base) [xinqianc@colossus scratch]$ mkdir long_term_project
 (base) [xinqianc@colossus scratch]$ cd long_term_project/
@@ -39,4 +39,7 @@ I have tried prefetch yet, because prefetch file is bigger, fastq-dump could als
 ./fasterq-dump SRR2558140 -O ~/scratch/long_term_data (succeed)
 ./fasterq-dump SRR2558152 -O ~/scratch/long_term_data (succeed)
 (it doesn't work:./fastq-dump SRR2558138, get sra.cache file, not what I want )
+
+(4) quality control of raw reads
+
 
