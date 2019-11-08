@@ -9,8 +9,16 @@ Download SRA toolkit environment:
 (Troubleshooting: disk quota exceed) (Solution : https://ncgas.org/Blog_Posts/SRA%20toolkit.php; http://ncbi.github.io/sra-tools/install_config.html)
 I still can not download SRR although I changed the environment to scratch....?????
 
+how to fix this problem: 
+(1)(command to change path: ./vdb-config -i)
+change path to scratch/long_term_data ( because if I only change the path to scratch, it will pop up that this directory is not empty
+. However, bin file is still in long_term_project.
+(2)run : vdb-config --restore-defaults
+(3)and then we could successfully run the sample fastq-dump file now
+I have tried prefetch yet, because prefetch file is bigger, fastq-dump could also provide enough information.
+
+
 (base) [xinqianc@colossus ~]$ cd scratch
 (base) [xinqianc@colossus scratch]$ mkdir long_term_project
 (base) [xinqianc@colossus scratch]$ cd long_term_project/
 
-fastq-dump
