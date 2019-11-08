@@ -42,4 +42,10 @@ I have tried prefetch yet, because prefetch file is bigger, fastq-dump could als
 
 (4) quality control of raw reads
 
+(base) [xinqianc@colossus long_term_data]$ mkdir fastq
+(base) [xinqianc@colossus long_term_data]$ ls
+fastq  nannot  sra               SRR2558138.fastq  SRR2558142.fastq  SRR2558152.fastq
+files  refseq  SRR2558121.fastq  SRR2558140.fastq  SRR2558143.fastq  wgs
+(base) [xinqianc@colossus long_term_data]$ mv SRR2558138.fastq SRR2558142.fastq  SRR2558152.fastq  SRR2558121.fastq SRR2558140.fastq SRR2558143.fastq fastq
+
 
