@@ -55,4 +55,10 @@ SRR2558152.fastq
 SRR2558140.fastq 
 SRR2558143.fastq 
 
-CTGTCTCTTATACACATCT
+
+(5) skip cutadapt step: because I can't find the right adapters for it. I try several adapters and most of overepresented sequences percentile is increased.
+(6)align reads
+
+
+
+
