@@ -57,8 +57,13 @@ SRR2558143.fastq
 
 
 (5) skip cutadapt step: because I can't find the right adapters for it. I try several adapters and most of overepresented sequences percentile is increased.
-(6)align reads
+
+(6)align reads to human transcriptomes by using bowtie2
+human transcriptomes: ftp://ftp.ensembl.org/pub/release-74/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh37.74.cdna.all.fa.gz
 
 
+(base) [xinqianc@colossus long_term_data]$ mkdir RNASeq
+(base) [xinqianc@colossus RNASeq]$ wget
 
-
+(base) [xinqianc@colossus RNASeq]$ wget http://ftp.ensembl.org/pub/release-74/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh37.74.cdna.all.fa.gz
+(base) [xinqianc@colossus RNASeq]$ gunzip Homo_sapiens.GRCh37.74.cdna.all.fa.gz
