@@ -82,7 +82,7 @@ Alignment140.sam
 
 
 
-
+bowtie2 -x Homo_sapiens SRR2558142.fastq -S Alignment142.sam
 
 
 
