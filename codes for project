@@ -68,7 +68,13 @@ human transcriptomes: ftp://ftp.ensembl.org/pub/release-74/fasta/homo_sapiens/cd
 (base) [xinqianc@colossus RNASeq]$ wget http://ftp.ensembl.org/pub/release-74/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh37.74.cdna.all.fa.gz
 (base) [xinqianc@colossus RNASeq]$ gunzip Homo_sapiens.GRCh37.74.cdna.all.fa.gz
 (base) [xinqianc@colossus RNASeq]$ bowtie2-build Homo_sapiens.GRCh37.74.cdna.all.fa.gz Homo_sapiens
-(base) [xinqianc@colossus RNASeq]$ bowtie2 -x Homo_sapiens SRR2558138.fastq -S Alignment.sam
+
+use Winscp to move SRR file from fastq to RNASeq directly.
+
+(base) [xinqianc@colossus RNASeq]$ bowtie2 -x Homo_sapiens SRR2558140.fastq -S Alignment140.sam
+
+
+
 
 
 
