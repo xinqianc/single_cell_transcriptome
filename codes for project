@@ -72,6 +72,13 @@ human transcriptomes: ftp://ftp.ensembl.org/pub/release-74/fasta/homo_sapiens/cd
 use Winscp to move SRR file from fastq to RNASeq directly.
 
 (base) [xinqianc@colossus RNASeq]$ bowtie2 -x Homo_sapiens SRR2558140.fastq -S Alignment140.sam
+Alignment140.sam
+14957553 reads; of these:
+  14957553 (100.00%) were unpaired; of these:
+    12893011 (86.20%) aligned 0 times
+    674747 (4.51%) aligned exactly 1 time
+    1389795 (9.29%) aligned >1 times
+13.80% overall alignment rate
 
 
 
