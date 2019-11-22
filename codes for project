@@ -115,5 +115,16 @@ control+a and followed by d
 screen -r
 exit
 
+(7) make count tables -RSEM (https://blog.csdn.net/qq_22575657/article/details/75381287)
+
+mkdir RSEM 
+cd RSEM
+wget https://codeload.github.com/deweylab/RSEM/tar.gz/v1.2.31
+mv v1.2.31 RSEM.v1.2.31.tar.gz
+tar zxvf RSEM.v1.2.31.tar.gz
+ wget ftp://ftp.ensembl.org/pub/release-98/gtf/homo_sapiens/Homo_sapiens.GRCh38.98.gtf.gz  (annotation:get gtf file from Ensembl :ftp://ftp.ensembl.org/pub/release-98/gtf/homo_sapiens)
+ wget ftp://ftp.ensembl.org/pub/release-98/fasta/homo_sapiens/
+
+
 
 
