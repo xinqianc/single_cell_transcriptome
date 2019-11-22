@@ -133,3 +133,4 @@ rsem-prepare-reference --gtf Homo_sapiens.GRCh38.98.chr.gtf \
            
 rsem-prepare-reference --gtf ~/long_term_data/RSem/Homo_sapiens.GRCh38.98.chr.gtf --bowtie2 ~//long_term_data/RSem/Homo_sapiens.GRCh37.74.cdna.all.fa
 
+(https://github.com/deweylab/RSEM#built)
