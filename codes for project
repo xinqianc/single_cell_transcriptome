@@ -122,9 +122,14 @@ cd RSEM
 wget https://codeload.github.com/deweylab/RSEM/tar.gz/v1.2.31
 mv v1.2.31 RSEM.v1.2.31.tar.gz
 tar zxvf RSEM.v1.2.31.tar.gz
- wget ftp://ftp.ensembl.org/pub/release-98/gtf/homo_sapiens/Homo_sapiens.GRCh38.98.gtf.gz  (annotation:get gtf file from Ensembl :ftp://ftp.ensembl.org/pub/release-98/gtf/homo_sapiens)
- wget ftp://ftp.ensembl.org/pub/release-98/fasta/homo_sapiens/
+ wget ftp://ftp.ensembl.org/pub/release-98/gtf/homo_sapiens/Homo_sapiens.GRCh38.98.chr.gtf.gz  (annotation:get gtf file from Ensembl :ftp://ftp.ensembl.org/pub/release-98/gtf/homo_sapiens)
+ wget ftp://ftp.ensembl.org/pub/release-74/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh37.74.cdna.all.fa.gz (fasta file)
 
-
-
+rsem-prepare-reference --gtf Homo_sapiens.GRCh38.98.chr.gtf \
+		       --trusted-sources BestRefSeq,Curated\ Genomic \
+		       --bowtie2 \
+		       Homo_sapiens.GRCh37.74.cdna.all.fa \
+		       ref/human_ensembl                                                            ----(build RSEM references)
+           
+rsem-prepare-reference --gtf ~/long_term_data/RSem/Homo_sapiens.GRCh38.98.chr.gtf --bowtie2 ~//long_term_data/RSem/Homo_sapiens.GRCh37.74.cdna.all.fa
 
