@@ -135,17 +135,16 @@ rsem-prepare-reference --gtf /Homo_sapiens.GRCh38.98.chr.gtf \
 try a new one:
 conda install RSEM (new one to install RSEM)
 and when using RSEM, I need unzip annotation file and fa file
+gunzip Homo_sapiens.GRCh37.74.gtf.gz
 gunzip Homo_sapiens.GRCh37.74.cdna.all.fa.gz
-gunzip Homo_sapiens.GRCh38.98.chr.gtf.gz
 
 rsem-prepare-reference --gtf Homo_sapiens.GRCh38.98.chr.gtf --trusted-sources BestRefSeq,Curated\ Genomic \ --bowtie2 Homo_sapiens.GRCh38.dna.alt.fa  /ref/human_refseq
 (https://github.com/deweylab/RSEM#built) (https://deweylab.github.io/RSEM/README.html)
 
 ############For Ensembl#############
-rsem-prepare-reference --gtf Homo_sapiens.GRCh38.98.chr.gtf \
+rsem-prepare-reference --gtf Homo_sapiens.GRCh37.74.gtf \
 		       --bowtie \
-		      Homo_sapiens.GRCh38.dna.alt.fa \
+		      Homo_sapiens.GRCh37.74.cdna.all.fa \
 		       ref/human_ensembl
 
-wget ftp://ftp.ensembl.org/pub/release-98/gtf/homo_sapiens/Homo_sapiens.GRCh38.98.chr.gtf.gz
 
