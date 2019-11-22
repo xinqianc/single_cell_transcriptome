@@ -132,5 +132,7 @@ rsem-prepare-reference --gtf Homo_sapiens.GRCh38.98.chr.gtf \
 		       ref/human_ensembl                                                            ----(build RSEM references)
            
 rsem-prepare-reference --gtf ~/long_term_data/RSem/Homo_sapiens.GRCh38.98.chr.gtf --bowtie2 ~//long_term_data/RSem/Homo_sapiens.GRCh37.74.cdna.all.fa
-
+(error: command not found)
 (https://github.com/deweylab/RSEM#built)
+
+I need to install R to use RSEM
