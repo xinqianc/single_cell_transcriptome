@@ -1,0 +1,32 @@
+RSEM (https://blog.csdn.net/qq_22575657/article/details/75381287)
+
+mkdir RSEM 
+cd RSEM
+wget https://codeload.github.com/deweylab/RSEM/tar.gz/v1.2.31
+mv v1.2.31 RSEM.v1.2.31.tar.gz
+tar zxvf RSEM.v1.2.31.tar.gz
+wget http://ftp.ensemblorg.ebi.ac.uk/pub/release-74/gtf/homo_sapiens/Homo_sapiens.GRCh37.74.gtf.gz  (annotation:get gtf file from Ensembl :ftp://ftp.ensembl.org/pub/release-98/gtf/homo_sapiens)
+wget http://ftp.ensembl.org/pub/release-74/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh37.74.cdna.all.fa.gz
+rsem-prepare-reference --gtf /Homo_sapiens.GRCh38.98.chr.gtf \
+		       --trusted-sources BestRefSeq,Curated\ Genomic \
+		       --bowtie2 \
+		       /Homo_sapiens.GRCh38.dna.alt.fa \
+		       ref/human_ensembl                                                            ----(build RSEM references)
+(error: command not found)
+--------------------------------------------------------------------------------------------------------
+try a new one:
+conda install RSEM (new one to install RSEM)
+and when using RSEM, I need unzip annotation file and fa file
+gunzip Homo_sapiens.GRCh37.74.gtf.gz
+gunzip Homo_sapiens.GRCh37.74.cdna.all.fa.gz
+
+rsem-prepare-reference --gtf Homo_sapiens.GRCh38.98.chr.gtf --trusted-sources BestRefSeq,Curated\ Genomic \ --bowtie2 Homo_sapiens.GRCh38.dna.alt.fa  /ref/human_refseq
+(https://github.com/deweylab/RSEM#built) (https://deweylab.github.io/RSEM/README.html)
+
+############For Ensembl#############
+rsem-prepare-reference --gtf Homo_sapiens.GRCh37.74.gtf \
+		       --bowtie \
+		      Homo_sapiens.GRCh37.74.cdna.all.fa \
+		       ref/human_ensembl
+---------------------------------------------------------------------------------------------------------
+ use HTseq instead (Galaxy)
