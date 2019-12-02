@@ -106,6 +106,9 @@ Alignment140.sam
 58.20% overall alignment rate
 
 
+(base) [xinqianc@colossus RNASeq]$ bowtie2 -x Homo_sapiens SRR2558121.fastq -S Alignment121.sam
+
+
 gene annotation: gtf file : when use Rsem to make a count table, and have the gtf file
 
 
