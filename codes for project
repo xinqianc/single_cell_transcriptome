@@ -25,31 +25,24 @@ change path to scratch/long_term_data ( because if I only change the path to scr
 (base) [xinqianc@colossus scratch]$ cd long_term_project/
 (base) [xinqianc@colossus long_term_project]$ cd sratoolkit.2.9.6-1-centos_linux64/
 (base) [xinqianc@colossus sratoolkit.2.9.6-1-centos_linux64]$ cd bin/
-(base) [xinqianc@colossus bin]$ ./fasterq-dump SRR2558138 -O ~/scratch/long_term_data (succeed)
-./fasterq-dump SRR2558138 -O ~/scratch/long_term_data (failed) (maybe because its data size is larger than others
-./fasterq-dump SRR2558125 -O ~/scratch/long_term_data (succeed)
-./fasterq-dump SRR2558121 -O ~/scratch/long_term_data (succeed)
-./fasterq-dump SRR2558143 -O ~/scratch/long_term_data (succeed)
-./fasterq-dump SRR2558142 -O ~/scratch/long_term_data (succeed)
-./fasterq-dump SRR2558140 -O ~/scratch/long_term_data (succeed)
-./fasterq-dump SRR2558152 -O ~/scratch/long_term_data (succeed)
+(base) [xinqianc@colossus bin]$
+ ./fasterq-dump SRR2558129 -O ~/scratch/long_term_data 
+ ./fasterq-dump SRR2558140 -O ~/scratch/long_term_data 
+ ./fasterq-dump SRR2558142 -O ~/scratch/long_term_data 
+ ./fasterq-dump SRR2558143 -O ~/scratch/long_term_data 
+ ./fasterq-dump SRR2558152 -O ~/scratch/long_term_data 
+ ./fasterq-dump SRR2558146 -O ~/scratch/long_term_data 
+ ./fasterq-dump SRR2558125 -O ~/scratch/long_term_data 
+ ./fasterq-dump SRR2558121 -O ~/scratch/long_term_data 
 (it doesn't work:./fastq-dump SRR2558138, get sra.cache file, not what I want )
 
 (4) quality control of raw reads
 
 (base) [xinqianc@colossus long_term_data]$ mkdir fastq
-(base) [xinqianc@colossus long_term_data]$ ls
-fastq  nannot  sra               SRR2558138.fastq  SRR2558142.fastq  SRR2558152.fastq
-files  refseq  SRR2558121.fastq  SRR2558140.fastq  SRR2558143.fastq  wgs
-(base) [xinqianc@colossus long_term_data]$ mv SRR2558138.fastq SRR2558142.fastq  SRR2558152.fastq  SRR2558121.fastq SRR2558140.fastq SRR2558143.fastq fastq
 
-fastqc SRR2558121.fastq
-SRR2558138.fastq
-SRR2558142.fastq
-SRR2558152.fastq
-SRR2558140.fastq 
-SRR2558143.fastq 
-
+fastqc SRR2558129.fastq   --(ALPHA) -- be resperesentative of QC of alpha cells
+fastqc SRR2558125.fastq   --(BETA)  -- be resperesentative of QC of beta cells
+(I checked all of them and they all passed the quality control)
 
 (5) skip cutadapt step: because I can't find the right adapters for it. I try several adapters and most of overepresented sequences percentile is increased.
 
