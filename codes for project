@@ -1,7 +1,7 @@
 Sequencing dataset: GSE73727 (Gene Expression Omnibus, GEO)
 Click SRA RUN Selector in the supplementary file (There are 70 samples [70 cells]), download 6 samples by using "fastq-dump" one by one.
 SRR2558125   beta
-SRR2558138   beta
+SRR2558121   beta
 SRR2558146   alpha	
 SRR2558143   alpha
 SRR2558142   alpha
@@ -26,9 +26,9 @@ change path to scratch/long_term_data ( because if I only change the path to scr
 (base) [xinqianc@colossus long_term_project]$ cd sratoolkit.2.9.6-1-centos_linux64/
 (base) [xinqianc@colossus sratoolkit.2.9.6-1-centos_linux64]$ cd bin/
 (base) [xinqianc@colossus bin]$ ./fasterq-dump SRR2558138 -O ~/scratch/long_term_data (succeed)
-./fasterq-dump SRR2558121 -O ~/scratch/long_term_data (failed) (maybe because its data size is larger than others
+./fasterq-dump SRR2558138 -O ~/scratch/long_term_data (failed) (maybe because its data size is larger than others
 ./fasterq-dump SRR2558125 -O ~/scratch/long_term_data (succeed)
-./fasterq-dump SRR2558138 -O ~/scratch/long_term_data (succeed)
+./fasterq-dump SRR2558121 -O ~/scratch/long_term_data (succeed)
 ./fasterq-dump SRR2558143 -O ~/scratch/long_term_data (succeed)
 ./fasterq-dump SRR2558142 -O ~/scratch/long_term_data (succeed)
 ./fasterq-dump SRR2558140 -O ~/scratch/long_term_data (succeed)
@@ -102,6 +102,13 @@ Alignment140.sam
 
 
 (base) [xinqianc@colossus RNASeq]$ bowtie2 -x Homo_sapiens SRR2558121.fastq -S Alignment121.sam
+
+12932654 reads; of these:
+  12932654 (100.00%) were unpaired; of these:
+    6667560 (51.56%) aligned 0 times
+    1073210 (8.30%) aligned exactly 1 time
+    5191884 (40.15%) aligned >1 times
+48.44% overall alignment rate
 
 
 gene annotation: gtf file : when use Rsem to make a count table, and have the gtf file
