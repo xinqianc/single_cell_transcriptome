@@ -1,0 +1,8 @@
+1. How to run the program remotely. (run the program when we close the shell)
+
+use command : to close the screen when running command
+screen
+the command you want...
+control+a and followed by d 
+screen -r
+exit
