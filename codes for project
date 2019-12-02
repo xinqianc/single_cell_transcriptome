@@ -103,6 +103,39 @@ Alignment140.sam
     5191884 (40.15%) aligned >1 times
 48.44% overall alignment rate
 
+(base) [xinqianc@colossus RNASeq]$ bowtie2 -x Homo_sapiens SRR2558140.fastq -S Alignment140.sam
+14957553 reads; of these:
+  14957553 (100.00%) were unpaired; of these:
+    12893011 (86.20%) aligned 0 times
+    674747 (4.51%) aligned exactly 1 time
+    1389795 (9.29%) aligned >1 times
+13.80% overall alignment rate
+
+(base) [xinqianc@colossus RNASeq]$ bowtie2 -x Homo_sapiens SRR2558129.fastq -S Alignment129.sam
+11908639 reads; of these:
+  11908639 (100.00%) were unpaired; of these:
+    5377908 (45.16%) aligned 0 times
+    1173280 (9.85%) aligned exactly 1 time
+    5357451 (44.99%) aligned >1 times
+54.84% overall alignment rate
+
+
+(base) [xinqianc@colossus RNASeq]$ bowtie2 -x Homo_sapiens SRR2558125.fastq -S Alignment125.sam
+15713191 reads; of these:
+  15713191 (100.00%) were unpaired; of these:
+    12140474 (77.26%) aligned 0 times
+    702298 (4.47%) aligned exactly 1 time
+    2870419 (18.27%) aligned >1 times
+22.74% overall alignment rate
+
+
+
+bowtie2 -x Homo_sapiens SRR2558146.fastq -S Alignment146.sam
+
+
+
+
+
 
 gene annotation: gtf file : when use Rsem to make a count table, and have the gtf file
 
