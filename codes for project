@@ -129,11 +129,13 @@ Alignment140.sam
 22.74% overall alignment rate
 
 
-
-bowtie2 -x Homo_sapiens SRR2558146.fastq -S Alignment146.sam
-
-
-
+(base) [xinqianc@colossus RNASeq]$ bowtie2 -x Homo_sapiens SRR2558146.fastq -S Alignment146.sam
+10554676 reads; of these:
+  10554676 (100.00%) were unpaired; of these:
+    4380938 (41.51%) aligned 0 times
+    942578 (8.93%) aligned exactly 1 time
+    5231160 (49.56%) aligned >1 times
+58.49% overall alignment rate
 
 
 
