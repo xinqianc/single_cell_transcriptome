@@ -148,6 +148,37 @@ control+a and followed by d
 screen -r
 exit
 
-(7) make count tables 
-use galaxy instead- HTseq
+(7) count reads ---- use galaxy website
+Salmon quant tool.
+For each sample, three files are used: (1) alignment.sam (2) Homo_sapiens.GRCh37.74.cdna.all.fa (3) Homo_sapiens,GRCh37.74.gtf
+Output: ENST name, length, effecivelength TPM, numberreads
+
+8 samples ---> 8 salmon file ; format: tabular
+
+(8) make count tables
+(8.1)Column Join tool.
+Paramter: Identifier column:1 ; Number of Header lines in each item :1;
+Output: one file that combine ENST name and 4 columns for each samples (length, reads, TPM..)
+(8.2) Cut columns from a table(cut) :
+Operation:keep
+List of Fields:1,4,8,12,16,20,24,28,32 (leave first column for ENST name and each sample's TPM column)
+
+(9)DESeq2 - find differential genes
+Input files:(1) alpha type: three salmon files,(2) beta type: three salmon files (3) Homo_sapiens.GRCh37.74.gtf
+Output: (1) PCA plot + a lot of plots.. ; (2) Base mean, log2FC, P-adj..
+use log2(FC) and P-adj to filter genes
+
+(10)Gene annotation
+David tool.
+Convert ENST ID to gene ID
+
+(11) limma
+Limma tool.
+
+
+
+
+
+
+
 
