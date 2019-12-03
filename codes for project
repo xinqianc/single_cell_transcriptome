@@ -148,12 +148,21 @@ control+a and followed by d
 screen -r
 exit
 
-(7) count reads ---- use galaxy website
+(7) count reads ---- use galaxy website ---- input Alignment.sam file into galaxy
 Salmon quant tool.
 For each sample, three files are used: (1) alignment.sam (2) Homo_sapiens.GRCh37.74.cdna.all.fa (3) Homo_sapiens,GRCh37.74.gtf
 Output: ENST name, length, effecivelength TPM, numberreads
 
 8 samples ---> 8 salmon file ; format: tabular
+files:
+104: salmon-129-alpha
+106: salmon-143-alpha
+108: salmon-140-alpha
+110: salmon-142-alpha
+112: salmon-146-beta
+114: salmon-121-beta
+116: salmon-152-beta
+118: salmon-125-beta
 
 (8) make count tables
 (8.1)Column Join tool.
