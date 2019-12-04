@@ -7,6 +7,7 @@ SRR2558143   alpha
 SRR2558142   alpha
 SRR2558140   beta
 
+use colossus.it.mtu.edu (server) via linux
 (1)Download SRA toolkit environment: 
 (base) [xinqianc@colossus long_term_project]$ wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current (https://ncbi.github.io/sra-tools/install_config.html) 
 (base) [xinqianc@colossus long_term_project]$tar -xzf sratoolkit.current-centos_linux64.tar.gz (unpacking tar file)
@@ -69,7 +70,7 @@ Alignment140.sam
 13.80% overall alignment rate
 
 (base) [xinqianc@colossus RNASeq]$ bowtie2 -x Homo_sapiens SRR2558142.fastq -S Alignment142.sam
-^A^A^A^A^A13222913 reads; of these:
+13222913 reads; of these:
   13222913 (100.00%) were unpaired; of these:
     8375746 (63.34%) aligned 0 times
     1049540 (7.94%) aligned exactly 1 time
@@ -94,7 +95,6 @@ Alignment140.sam
 
 
 (base) [xinqianc@colossus RNASeq]$ bowtie2 -x Homo_sapiens SRR2558121.fastq -S Alignment121.sam
-
 12932654 reads; of these:
   12932654 (100.00%) were unpaired; of these:
     6667560 (51.56%) aligned 0 times
@@ -136,17 +136,15 @@ Alignment140.sam
     5231160 (49.56%) aligned >1 times
 58.49% overall alignment rate
 
-
-
-gene annotation: gtf file : when use Rsem to make a count table, and have the gtf file
-
-
+-----------------------------------------------------------
 use command : to close the screen when running command
 screen
 the command you want...
 control+a and followed by d 
 screen -r
 exit
+-----------------------------------------------------------
+galaxy website:
 
 (7) count reads ---- use galaxy website ---- input Alignment.sam file into galaxy
 Salmon quant tool.
